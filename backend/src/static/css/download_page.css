@@ -1,0 +1,151 @@
+/* General Layout and Styling */
+.download-page body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+}
+
+.download-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.download-page .lead {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.download-page .download-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-page .download-card .platform-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.download-page .download-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.download-page .download-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.download-page .download-card .btn {
+  margin-top: 15px;
+}
+
+.download-page .row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.download-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .download-page .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styling for user-guide-block */
+.user-guide-block {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.user-guide-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-guide-header h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.user-guide-header .lead {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.installation-guide {
+  padding: 20px;
+}
+
+.installation-guide h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.installation-guide-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.installation-guide .download-card {
+  width: 45%;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.installation-guide .download-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.installation-guide ul {
+  padding-left: 20px;
+  color: #333;
+}
+
+.installation-guide ul li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.installation-guide code {
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .installation-guide-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .installation-guide .download-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

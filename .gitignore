@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+secret_unique_id.txt
+dist/
+build/
+UserAppData
+UserAppData.json

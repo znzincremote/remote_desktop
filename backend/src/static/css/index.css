@@ -1,0 +1,167 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4e89fc, #6b73ff);
+    color: #fff;
+    padding: 60px 20px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+}
+
+.hero .container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.faded-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    flex: 1;
+    text-align: left;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* How to Use Section */
+.how-to-use {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.step-image {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Enlarged Image */
+.step-image:hover img {
+    transform: scale(1.1);
+}
+
+.step-image .full-image {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 110%;
+    z-index: 10;
+    width: 400px;
+    max-width: 90vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.step-image:hover .full-image {
+    display: block;
+}
+
+.step-description {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.step-description p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-image .full-image {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 110%;
+        width: 300px;
+    }
+}

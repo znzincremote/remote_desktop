@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+{% endblock styling %}
+
+{% block main %}
+<main class="landing-page">
+    <section class="hero">
+        <div class="container">
+            <div class="content">
+                <div class="image">
+                    <img src="{{ url_for('static', path='images/landing_page_img.webp') }}" alt="Remote Desktop" class="faded-image"/>
+                </div>
+                <div class="text">
+                    <h1 class="heading">Seamless Remote Access Anytime, Anywhere</h1>
+                    <p class="description">
+                        Empower your productivity with instant remote desktop connections, simplified.
+                    </p>
+                    <a href="{{ url_for('remote_desktop_download') }}" class="btn btn-primary">Download Desktop App</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Sections -->
+    <section class="how-to-use">
+        <div class="container">
+            <h2 class="section-title">How to Use RemoteDesktop ?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-image">
+                        <img src="{{ url_for('static', path='images/remote_desktop_logo.ico') }}" alt="Download and Run App" />
+                        <div class="full-image">
+                            <img src="{{ url_for('static', path='images/remote_desktop_logo.ico') }}" alt="Full Download and Run App" />
+                        </div>
+                    </div>
+                    <div class="step-description">
+                        <h3 class="step-title">Step 1: Download and Run App</h3>
+                        <p>To get started, simply download and run the Remote Desktop app. After launching the app, you'll be able to proceed to the next steps for connecting to remote systems securely.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-image">
+                        <img src="{{ url_for('static', path='images/app_use_demo_images/login_image_demo.png') }}" alt="Authorize User" />
+                        <div class="full-image">
+                            <img src="{{ url_for('static', path='images/app_use_demo_images/login_image_demo.png') }}" alt="Full Authorize User" />
+                        </div>
+                    </div>
+                    <div class="step-description">
+                        <h3 class="step-title">Step 2: Authorize User</h3>
+                        <p>To get started, simply register using the desktop app. After registering, log in to the app to authorize your access. This is the first step towards connecting securely.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-image">
+                        <img src="{{ url_for('static', path='images/app_use_demo_images/address_id_image_demo.png') }}" alt="Enter Remote Address" />
+                        <div class="full-image">
+                            <img src="{{ url_for('static', path='images/app_use_demo_images/address_id_image_demo.png') }}" alt="Full Enter Remote Address" />
+                        </div>
+                    </div>
+                    <div class="step-description">
+                        <h3 class="step-title">Step 3: Enter Remote Address</h3>
+                        <p>Your local system (your system) needs to connect to the remote system (the system you want to access). Simply enter the Remote System ID in the input field and click the "Start Connection" button.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-image">
+                        <img src="{{ url_for('static', path='images/app_use_demo_images/connection_request_image_demo.png') }}" alt="Accept or Reject Connection" />
+                        <div class="full-image">
+                            <img src="{{ url_for('static', path='images/app_use_demo_images/connection_request_image_demo.png') }}" alt="Full Accept or Reject Connection" />
+                        </div>
+                    </div>
+                    <div class="step-description">
+                        <h3 class="step-title">Step 4: Accept or Reject Connection</h3>
+                        <p>Once you click "Start Connection", a message will be sent to the remote system asking for permission to connect. If the remote user accepts, your local system will be granted access to the remote system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock main %}

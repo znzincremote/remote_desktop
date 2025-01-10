@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block styling %}
+  <link href="{{ url_for('static', path='css/download_page.css') }}" rel="stylesheet">
+{% endblock styling %}
+
+{% block main %}
+  <div class="download-page main-block">  <!-- Added download-page class here -->
+    <div class="download-info">
+      <h1>Download Remote Desktop</h1>
+      <p class="lead">Choose your platform below to get the latest version of Remote Desktop.</p>
+    </div>
+    
+    <div class="row">
+      <!-- Windows Download Section -->
+      <div>
+        <div class="download-card">
+          <img src="{{ url_for('static', path='images/windows-platform-logo.svg') }}" alt="Windows" class="platform-icon">
+          <h3>Windows</h3>
+          <p>Download and install Remote Desktop for Windows to get started with remote access.</p>
+          <a href="{{ url_for('download_executable', os_type='windows', version='1.0') }}" class="btn btn-primary">Download for Windows</a>
+        </div>
+      </div>
+      
+      <!-- Linux Download Section -->
+      <div>
+        <div class="download-card">
+          <img src="{{ url_for('static', path='images/linux-platform-logo.png') }}" alt="Linux" class="platform-icon">
+          <h3>Linux</h3>
+          <p>Install Remote Desktop on your Linux machine and enjoy seamless remote control.</p>
+          <a href="{{ url_for('download_executable', os_type='linux', version='1.0') }}" class="btn btn-primary">Download for Linux</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-guide-block">
+    <!-- Installation Guide Section -->
+    <div class="user-guide-header">
+      <h1>Installation Guide</h1>
+      <p class="lead">Installation guide to your Remote Desktop app</p>
+    </div>
+    <div class="installation-guide ">
+      <div class="installation-guide-content">
+        <!-- Windows Installation Guide -->
+        <div class="download-card">
+          <h4>Windows Installation</h4>
+          <ul>
+            <li>Download the executable file for Windows</li>
+            <li>Double click the `RemoteDesktop.exe` file</li>
+          </ul>
+        </div>
+
+        <!-- Linux Installation Guide -->
+        <div class="download-card">
+          <h4>Linux Installation</h4>
+          <ul>
+            <li>Download the executable file for Linux</li>
+            <li>Open a terminal and navigate to the directory containing the downloaded file</li>
+            <li>Move the file accroding to your needs. (Optional)</li>
+            <li>Navigate to the parent folder of the downloaded file in terminal</li>
+            <li>Run the following command to make the file executable: <code>chmod +x RemoteDesktop</code></li>
+            <li>Run the application with the following command: <code>./RemoteDesktop</code></li>
+            <li>You can run the now on double clicking the downloaded file</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock main %}
+
+{% block script %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock %}
